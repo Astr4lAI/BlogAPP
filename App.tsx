@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './screens/Home';
 import { createDrawerNavigator, DrawerContent } from '@react-navigation/drawer';
 import React from 'react';
+import Gallery from './screens/Gallery';
+import Pokemons from './screens/Pokemons';
 
 const Drawer = createDrawerNavigator();
 
@@ -28,7 +30,18 @@ export default function App() {
             },
           }}>
           <Drawer.Screen name = "Home" component = {Home} />
+          <Drawer.Screen name = "Gallery" component = {Gallery} />
+          <Drawer.Screen name = "Pokemons" component = {Pokemons} />
         </Drawer.Navigator>
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
